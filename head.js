@@ -9,7 +9,7 @@ const assertEqual = function (actual, expected) {
 assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
 
-function head(item) {
+const head = function (item) {
   if (item.length === 0) {
     return undefined;
   } else {
