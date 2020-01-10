@@ -1,9 +1,9 @@
 const takeUntil = function (array, callback) {
   const results = []
   for (let num of array) {
-    console.log("callback is" + callback)
+    // console.log("callback is " + callback)
     if (!callback(num)) {
-      results.push(callback(num) ? null : num);
+      results.push(num);
     } else {
 
       break;
@@ -45,4 +45,4 @@ console.log('---');
 const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
 const results2 = takeUntil(data2, x => x === ',');
 console.log(results2);
-assertEqualArray(results2, ["I've', 'been', 'to', 'Hollywood"]);
+assertEqualArray(results2, ["I've", "been", "to", "Hollywood"]);
