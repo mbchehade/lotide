@@ -1,11 +1,11 @@
 const takeUntil = function (array, callback) {
   const results = []
   for (let num of array) {
-    if (callback(num)) {
+    console.log("callback is" + callback)
+    if (!callback(num)) {
       results.push(callback(num) ? null : num);
-      console.log(false);
     } else {
-      console.log(true);
+
       break;
     }
   }
